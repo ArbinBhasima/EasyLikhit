@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
+import os
 
 from pathlib import Path
 from datetime import timedelta
@@ -27,6 +28,10 @@ SECRET_KEY = "django-insecure-taaf+6y+ou2olc))1^#)oomp-r6j@2oyv&kgf@8-2*k=541mu#
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # REST Framework settings
 REST_FRAMEWORK = {
